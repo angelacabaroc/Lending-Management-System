@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Lending Management System1/1.0.0": {
+        "runtime": {
+          "Lending Management System1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Lending Management System1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
