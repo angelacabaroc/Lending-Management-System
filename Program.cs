@@ -1,70 +1,148 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace Lending_Management_System1
+namespace Lending_Systems
 {
     class Program
     {
+        
+       
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("WELCOME TO LENDING MANAGEMENT SYSTEM");
+            Borrower borrow = new Borrower();
+        
+           
+
+        string username = "angelacabaroc";
+            string name = "Angela Cabaroc";
+            string sex = "Female";
+            string address = "San Jose , Binan Laguna";
+            string accounttype = "Savings Account";
+            int savingsbalance = 50000;
+            int withdraw = 500;
+            int deposit = 1000;
+            string optionSelected;
+
+            Console.WriteLine("========================= Welcome to Lending Management System===============================");
             Console.WriteLine();
-            Console.WriteLine("************LOG IN***********");
-            Console.Write("Fullname: ");
-            String name = Console.ReadLine();
-            Console.Write("Address: ");
-            String add = Console.ReadLine();
-            Console.Write("Account Type: ");
-            String type = Console.ReadLine();
-            Console.Write("Withdrawal: ");
-            String withdraw = Console.ReadLine();
-            Console.Write("Deposit : ");
-            String deposit = Console.ReadLine();
-            Console.Write("Number of Months: ");
-            int nummonth = int.Parse(Console.ReadLine());
-            Console.Write("Amount of Loan: ");
-            int amloan = int.Parse(Console.ReadLine());
-            Console.Write("Interest Rate: ");
-            int rate = int.Parse(Console.ReadLine());
-
-            int a, b, c, d;
-            a = amloan * rate;
-            b = a * nummonth;
-            c = b + amloan;
-            d = c / nummonth;
+            Console.WriteLine("Know more about your Savings: ");
             Console.WriteLine();
-            Console.WriteLine("Per Month Interest: " + a);
-            Console.WriteLine("Overall Interest Rate of Loan: " + b);
-            Console.WriteLine("Total Loan Payment: " + c);
-            Console.WriteLine("Monthly Payment: " + d);
+            Console.WriteLine("Account Type: " + accounttype);
+            Console.WriteLine();
+            Console.WriteLine("Type\'a\' To view your savings ");
+            Console.WriteLine();
+            Console.WriteLine("Type\'b\' To withdraw.");
+            Console.WriteLine();
+            Console.WriteLine("Type\'d\' To deposit.");
+            Console.WriteLine();
+            Console.WriteLine("Type\'i\' To view the information of the Client. ");
+            Console.WriteLine();
+            Console.WriteLine("Type\'x'\' To add a New Client. ");
+            Console.WriteLine();
+            Console.WriteLine("Type\'e\' To exit the program.");
             Console.WriteLine();
 
+            Console.Write("Input: ");
 
+
+
+            optionSelected = Console.ReadLine().ToLower();
+            if (optionSelected.Equals("a"))
+            {
+
+            }
+            else if (optionSelected.Equals("b"))
+            {
+                Console.WriteLine("How much would you withdraw? ");
+                int savings = Convert.ToInt32(Console.ReadLine());
+                savingsbalance -= withdraw;
+
+                //savingsbalance = savingsbalance - withdraw
+            }
+            else
+            {
+                Console.WriteLine("Error: Invalid Input");
+
+            }
             Console.WriteLine();
-            Console.WriteLine("*****************RESULTS*********************");
-            Console.WriteLine();
-            Console.WriteLine("Customer's Name: " + name);
-            Console.WriteLine("Address: " + add);
-            Console.WriteLine("Account Type: " + type);
-            Console.WriteLine("Interest Rate: " + rate);
-            Console.WriteLine("Amount of Loan: " + amloan);
-            Console.WriteLine("Number of Months: " + nummonth);
-            Console.WriteLine("Per Month Interest: " + a);
-            Console.WriteLine("Overall Interest Rate of Loan: " + b);
-            Console.WriteLine("Monthly Payment : " + d);
-            Console.WriteLine("Total Loan Payment: " + c);
-          
+            for (; optionSelected != "e";)
+            {
+                if (optionSelected.Equals("a"))
+                {
+                    Console.WriteLine(" Available Savings: " + savingsbalance);
+                    Console.WriteLine("========================================================");
+                    
+                }
+                else if (optionSelected.Equals("b"))
+                {
+                    Console.Write("How much would you withdraw?: ");
+                    int wdraw = Convert.ToInt32(Console.ReadLine());
+                    savingsbalance -= withdraw;
+                    Console.WriteLine("====================================================");
+
+                    //savingsbalance = savingsbalance - withdraw
+
+                }
+                else if (optionSelected.Equals("i"))
+                {
+                    Console.WriteLine("=============================LENDING MANAGEMENT SYSTEM==========================");
+                    Console.WriteLine("Fullname: " + name);
+                    Console.WriteLine("Username: " + username);
+                    Console.WriteLine("Address: " + address);
+                    Console.WriteLine("Sex: " + sex);
+                    Console.WriteLine("Account Type: " + accounttype);
+                    Console.WriteLine("Savings: " + savingsbalance);
+                    Console.WriteLine("=============================================================================");
+                }
+                else if (optionSelected.Equals("d"))
+                {
+                    Console.Write("How much do will you deposit?: ");
+                    int dep = Convert.ToInt32(Console.ReadLine());
+                    savingsbalance += deposit;
+                    Console.WriteLine("=============================================================================");
+
+                    //savingsaccount = savingsaccount + deposit;
+                }
+                else if(optionSelected.Equals("x"))
+                {
+                    borrow.AddClient();
+  
+
+                }
+                else
+
+                {
+                    Console.WriteLine("Error: Invalid Selection.");
+                    Console.WriteLine("==============================================================================");
 
 
+                }
+                Console.WriteLine();
+                Console.WriteLine("Type\'a\' To view your savings ");
+                Console.WriteLine();
+                Console.WriteLine("Type\'b\' To withdraw.");
+                Console.WriteLine();
+                Console.WriteLine("Type\'d\' To deposit.");
+                Console.WriteLine();
+                Console.WriteLine("Type\'i\' To view the information of the Client. ");
+                Console.WriteLine();
+                Console.WriteLine("Type\'x'\' To add a New Client.");
+                Console.WriteLine();
+                Console.WriteLine("Type\'e\' To exit the program.");
+                Console.WriteLine();
 
-            Console.WriteLine();
-            Console.WriteLine("*******************THANKYOU******************");
+                Console.Write("Input: ");
 
-            
-
-
-
+                optionSelected = Console.ReadLine().ToLower();
+                Console.WriteLine();
+            }
+            Console.WriteLine("Program Exiting..");
 
         }
-    }
-}
+
+       
+        
+        }
+      }
+    
+
