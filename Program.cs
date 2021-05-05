@@ -10,10 +10,10 @@ namespace Lending_Systems
         static void Main(string[] args)
         {
             Borrower borrow = new Borrower();
-        
-           
 
-        string username = "angelacabaroc";
+
+
+            string username = "angelacabaroc";
             string name = "Angela Cabaroc";
             string sex = "Female";
             string address = "San Jose , Binan Laguna";
@@ -37,6 +37,8 @@ namespace Lending_Systems
             Console.WriteLine();
             Console.WriteLine("Type\'i\' To view the information of the Client. ");
             Console.WriteLine();
+            Console.WriteLine("Type\'s\' To view Savings Loan.");
+            Console.WriteLine();
             Console.WriteLine("Type\'x'\' To add a New Client. ");
             Console.WriteLine();
             Console.WriteLine("Type\'e\' To exit the program.");
@@ -59,11 +61,7 @@ namespace Lending_Systems
 
                 //savingsbalance = savingsbalance - withdraw
             }
-            else
-            {
-                Console.WriteLine("Error: Invalid Input");
-
-            }
+           
             Console.WriteLine();
             for (; optionSelected != "e";)
             {
@@ -71,7 +69,7 @@ namespace Lending_Systems
                 {
                     Console.WriteLine(" Available Savings: " + savingsbalance);
                     Console.WriteLine("========================================================");
-                    
+
                 }
                 else if (optionSelected.Equals("b"))
                 {
@@ -103,11 +101,15 @@ namespace Lending_Systems
 
                     //savingsaccount = savingsaccount + deposit;
                 }
-                else if(optionSelected.Equals("x"))
+                else if (optionSelected.Equals("x"))
                 {
                     borrow.AddClient();
-  
 
+
+                }
+                else if (optionSelected.Equals("s"))
+                {
+                    borrow.SavingsLoan();
                 }
                 else
 
@@ -126,7 +128,9 @@ namespace Lending_Systems
                 Console.WriteLine();
                 Console.WriteLine("Type\'i\' To view the information of the Client. ");
                 Console.WriteLine();
-                Console.WriteLine("Type\'x'\' To add a New Client.");
+                Console.WriteLine("Type\'s\' To view Savings Loan.");
+                Console.WriteLine();
+                Console.WriteLine("Type\'x\' To add a New Client.");
                 Console.WriteLine();
                 Console.WriteLine("Type\'e\' To exit the program.");
                 Console.WriteLine();
@@ -140,9 +144,7 @@ namespace Lending_Systems
 
         }
 
-       
-        
-        }
-      }
-    
 
+
+    }
+}
