@@ -10,7 +10,7 @@ namespace Lending_Systems
         static void Main(string[] args)
         {
             Borrower borrow = new Borrower();
-
+            Loan loan = new Loan();
 
 
             string username = "angelacabaroc";
@@ -37,7 +37,7 @@ namespace Lending_Systems
             Console.WriteLine();
             Console.WriteLine("Type\'i\' To view the information of the Client. ");
             Console.WriteLine();
-            Console.WriteLine("Type\'s\' To view Savings Loan.");
+            Console.WriteLine("Type\'v\' To view Savings Loan.");
             Console.WriteLine();
             Console.WriteLine("Type\'x'\' To add a New Client. ");
             Console.WriteLine();
@@ -107,9 +107,10 @@ namespace Lending_Systems
 
 
                 }
-                else if (optionSelected.Equals("s"))
+             
+                else if (optionSelected.Equals("v"))
                 {
-                    borrow.SavingsLoan();
+                    loan.SavingsLoan();
                 }
                 else
 
@@ -128,7 +129,7 @@ namespace Lending_Systems
                 Console.WriteLine();
                 Console.WriteLine("Type\'i\' To view the information of the Client. ");
                 Console.WriteLine();
-                Console.WriteLine("Type\'s\' To view Savings Loan.");
+                Console.WriteLine("Type\'v\' To view Savings Loan.");
                 Console.WriteLine();
                 Console.WriteLine("Type\'x\' To add a New Client.");
                 Console.WriteLine();
