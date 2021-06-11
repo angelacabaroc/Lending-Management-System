@@ -1,42 +1,46 @@
 ﻿using System;
+
 using System.Collections.Generic;
-using System.Text;
 
 namespace Lending_Systems
 {
-    class Borrower
+    class borrower
     {
         public static List<string> accountNames = new List<string> { };
 
         public void AddClient()
         {
+            // Ang ginagawa po ng class nato ay nag aadd po sya ng client sa list at makikita mo sya pag tinype mo yung "x" sa choices.
 
-            accountNames.Add("Angela");
-            accountNames.Add("Michael");
-            accountNames.Add("Leni");
-            accountNames.Add("Royette");
+            Console.WriteLine("Enter Client Name: ");
+            accountNames.Add(Console.ReadLine());
             Console.WriteLine();
-            Console.WriteLine("=======================================================");
-            Console.WriteLine("New Client Added!");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("========================================================================");
+            Console.WriteLine();
+            Console.WriteLine("Client Added Successfully!");
             accountNames.ForEach(Console.WriteLine);
 
 
 
         }
 
-            static void client()
+        static void client()
+        {
+            //code want to view the Client();
+
+            foreach (var item in accountNames)
             {
-                //code want to view the Client();
-
-                foreach (var item in accountNames)
-                {
-                    Console.WriteLine(item);
-                }
-
-             
-
-                }
+                Console.WriteLine(item);
             }
+
+
+
         }
-              
-    
+    }
+
+
+
+
+}

@@ -5,13 +5,11 @@ namespace Lending_Systems
 {
     class Program
     {
-        
-       
+
         static void Main(string[] args)
         {
-            Borrower borrow = new Borrower();
+            borrower borrow = new Borrower();
             Loan loan = new Loan();
-
 
             string username = "angelacabaroc";
             string name = "Angela Cabaroc";
@@ -21,6 +19,8 @@ namespace Lending_Systems
             int savingsbalance = 50000;
             int withdraw = 500;
             int deposit = 1000;
+
+
             string optionSelected;
 
             Console.WriteLine("========================= Welcome to Lending Management System===============================");
@@ -37,7 +37,7 @@ namespace Lending_Systems
             Console.WriteLine();
             Console.WriteLine("Type\'i\' To view the information of the Client. ");
             Console.WriteLine();
-            Console.WriteLine("Type\'v\' To view Savings Loan.");
+            Console.WriteLine("Type\'l\' To view Loan Status.");
             Console.WriteLine();
             Console.WriteLine("Type\'x'\' To add a New Client. ");
             Console.WriteLine();
@@ -61,7 +61,7 @@ namespace Lending_Systems
 
                 //savingsbalance = savingsbalance - withdraw
             }
-           
+
             Console.WriteLine();
             for (; optionSelected != "e";)
             {
@@ -107,10 +107,10 @@ namespace Lending_Systems
 
 
                 }
-             
-                else if (optionSelected.Equals("v"))
+
+                else if (optionSelected.Equals("l"))
                 {
-                    loan.SavingsLoan();
+                    loan.loans();
                 }
                 else
 
@@ -129,7 +129,7 @@ namespace Lending_Systems
                 Console.WriteLine();
                 Console.WriteLine("Type\'i\' To view the information of the Client. ");
                 Console.WriteLine();
-                Console.WriteLine("Type\'v\' To view Savings Loan.");
+                Console.WriteLine("Type\'l\' To view Loan Status.");
                 Console.WriteLine();
                 Console.WriteLine("Type\'x\' To add a New Client.");
                 Console.WriteLine();
@@ -148,4 +148,9 @@ namespace Lending_Systems
 
 
     }
+
+    internal class Borrower : borrower
+    {
+    }
 }
+
